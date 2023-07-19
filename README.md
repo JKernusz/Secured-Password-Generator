@@ -24,6 +24,7 @@ No installation required.
 For a class assignment, open for anyone to use.
 
 ## Link to deployed website
-
+![Screenshot of deployed app](image.png)
+https://jkernusz.github.io/Secured-Password-Generator/
 ## License
 MIT License (Refer to license document)
