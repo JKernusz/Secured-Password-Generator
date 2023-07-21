@@ -1,4 +1,4 @@
-// Assignment code here
+// Global variables
 var specialCharacters = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~".split("");
 var numbers = "1234567890".split("");
 var caps = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
@@ -6,10 +6,12 @@ var lower = "abcdefghijklmnopqrstuvwxyz".split("");
 var password = [];
 var passwordCount = password.length;
 
-// Get references to the #generate element
+// Gets a reference to the #generate element
+
 var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
+// Writes the password to the #password input
+
 function writePassword() {
   passwordCriteriaPrompt();
   var password = passwordCriteriaPrompt();
@@ -17,6 +19,7 @@ function writePassword() {
 
   passwordText.value = password;
 }
+// Prompts the user with questions about the desired password
 
 function passwordCriteriaPrompt() {
   noChar = prompt("How Many Characters? Between 8 and 128");
@@ -54,6 +57,8 @@ function passwordCriteriaPrompt() {
   } else passwordCount = parseInt;
   var generatedPassword = [];
   var possibleCharacters = password.flat();
+ 
+  // For loop to generate randomized selected charachters in chosen length
   
   for (var i = 0; i < noChar; i++) {
     var randomIndex = Math.floor(Math.random() * possibleCharacters.length);
@@ -67,5 +72,5 @@ function passwordCriteriaPrompt() {
 
 
 
-// Add event listener to generate button
+// An event listener to generate password button
 generateBtn.addEventListener("click", writePassword);
